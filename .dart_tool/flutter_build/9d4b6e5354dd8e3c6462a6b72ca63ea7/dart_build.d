@@ -1,0 +1,1 @@
+ C:\\Users\\pangl\\products\\project_manager_commulity\\.dart_tool\\flutter_build\\9d4b6e5354dd8e3c6462a6b72ca63ea7\\dart_build_result.json: 
