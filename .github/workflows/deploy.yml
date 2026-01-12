@@ -18,6 +18,12 @@ jobs:
         with:
           flutter-version: '3.38.3' # 更新到包含Dart 3.10.1的版本
 
+      - name: Enable Web platform
+        run: flutter config --enable-web
+
+      - name: Ensure Web configuration
+        run: flutter create . --platforms web --no-pub
+
       - name: Install dependencies
         run: flutter pub get
 
