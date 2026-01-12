@@ -16,9 +16,6 @@ class BasicInfoPage extends StatelessWidget {
           const SizedBox(height: 8),
           Text(description, style: Theme.of(context).textTheme.bodyMedium),
           const SizedBox(height: 16),
-          Text('统计', style: Theme.of(context).textTheme.titleMedium),
-          const SizedBox(height: 8),
-          Text('计数器: $counter', style: Theme.of(context).textTheme.bodyLarge),
         ],
       ),
     );

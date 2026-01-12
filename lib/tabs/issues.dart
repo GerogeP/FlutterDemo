@@ -10,7 +10,7 @@ class IssuesPage extends StatelessWidget {
     return ListView.separated(
       padding: const EdgeInsets.all(12),
       itemCount: items.length,
-      separatorBuilder: (_, __) => const Divider(height: 1),
+      separatorBuilder: (_, index) => const Divider(height: 1),
       itemBuilder: (context, index) {
         return ListTile(
           title: Text(items[index]),

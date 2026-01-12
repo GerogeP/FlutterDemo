@@ -10,10 +10,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Theme.of(context).colorScheme.onSecondary,
-      elevation: 14,
+      elevation: 4, // 减小阴影大小，使appbar看起来不那么高
       child: SafeArea(
         child: SizedBox(
-          height: kToolbarHeight,
+          height: 80.0, // 增加appbar高度到80
           child: Row(
             children: [
               Padding(
@@ -73,21 +73,57 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                    padding: const EdgeInsets.only(left: 48.0, right: 24.0),
                   child: Center(
                     child: TabBar(
-                     isScrollable: true,
-                    tabs: const [
-                      Tab(child: Text('基本信息', softWrap: false)),
-                      Tab(child: Text('问题', softWrap: false)),
-                      Tab(child: Text('动态', softWrap: false)),
-                      Tab(child: Text('社区', softWrap: false)),
-                      Tab(child: Text('项目成员', softWrap: false)),
-                      Tab(child: Text('项目设置', softWrap: false)),
-                    ],
-                    labelColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.95),
-                    unselectedLabelColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
-                    labelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    unselectedLabelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    indicatorColor: Theme.of(context).colorScheme.primary,
-                    labelPadding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      isScrollable: true,
+                      tabs: const [
+                        Tab(child: Text('基本信息', softWrap: false)),
+                        Tab(child: Text('问题', softWrap: false)),
+                        Tab(child: Text('动态', softWrap: false)),
+                        Tab(child: Text('社区', softWrap: false)),
+                        Tab(child: Text('项目成员', softWrap: false)),
+                        Tab(child: Text('项目设置', softWrap: false)),
+                      ],
+                      labelColor: Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withOpacity(0.95),
+                      unselectedLabelColor: Theme.of(
+                        context,
+                      ).colorScheme.onSurface.withOpacity(0.7),
+                      labelStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      unselectedLabelStyle: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      indicatorColor: Colors.transparent, // 隐藏默认指示器
+                      indicatorWeight: 0.0, // 完全移除下边框
+                      indicatorSize: TabBarIndicatorSize.tab, // 指示器大小与标签一致
+                      dividerHeight: 0.0, // 移除底部分割线
+                      labelPadding: const EdgeInsets.symmetric(
+                        horizontal: 24.0, // 增加水平内边距
+                        vertical: 12.0, // 增加垂直内边距
+                      ),
+                      // 自定义指示器，添加边框和阴影效果
+                      indicator: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(
+                            20,
+                            18,
+                            17,
+                            42,
+                          ), // 12112A, 8%透明度
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 4.0,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -190,5 +226,5 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(80.0); // 增加appbar高度到80
 }

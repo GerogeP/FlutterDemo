@@ -126,26 +126,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         backgroundColor: Theme.of(context).colorScheme.surface,
-        body: TabBarView(
-          children: [
-            // Tab 1: 基本信息
-            BasicInfoPage(description: widget.description, counter: _counter),
-            // Tab 2: 问题
-            const IssuesPage(),
-            // Tab 3: 动态
-            const ActivityPage(),
-            // Tab 4: 社区
-            const CommunityPage(),
-            // Tab 5: 项目成员
-            const MembersPage(),
-            // Tab 6: 项目设置
-            const SettingsPage(),
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
+        body: Container(
+          padding: const EdgeInsets.only(top: 10.0), // 添加10像素的顶部隔离带
+          child: TabBarView(
+            children: [
+              // Tab 1: 基本信息
+              BasicInfoPage(description: widget.description, counter: _counter),
+              // Tab 2: 问题
+              const IssuesPage(),
+              // Tab 3: 动态
+              const ActivityPage(),
+              // Tab 4: 社区
+              const CommunityPage(),
+              // Tab 5: 项目成员
+              const MembersPage(),
+              // Tab 6: 项目设置
+              const SettingsPage(),
+            ],
+          ),
         ),
       ),
     );
