@@ -438,7 +438,7 @@ class _CommunityPageState extends State<CommunityPage> with SingleTickerProvider
                             Icon(iconData, size: 18, color: iconColor),
                             const SizedBox(width: 8),
                             Text(
-                              '${tabTitle}的项目',
+                              '$tabTitle的项目',
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontWeight: FontWeight.bold),
                             ),
@@ -490,7 +490,7 @@ class _CommunityPageState extends State<CommunityPage> with SingleTickerProvider
                             Icon(iconData, size: 18, color: iconColor),
                             const SizedBox(width: 8),
                             Text(
-                              '${tabTitle}的专区',
+                              '$tabTitle的专区',
                               style: Theme.of(context).textTheme.titleMedium
                                   ?.copyWith(fontWeight: FontWeight.bold),
                             ),
