@@ -91,7 +91,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-\n# Flutter Web ÓÅ»¯¹¹½¨²ÎÊı
-# Ìå»ıÓÅ»¯£º´Ó 32.07 MB ¼õÉÙµ½ 2.83 MB
-# ÓÅ»¯±ÈÀı£º91.2%
-# ÓÅ»¯ÃüÁî£ºflutter build web --release --base-href '/FlutterDemo/' --optimization-level=4 --no-source-maps --tree-shake-icons --csp --dart-define=FLUTTER_WEB_USE_SKIA=false
+# Flutter Web ä¼˜åŒ–æ„å»ºå‚æ•°
+# ä½“ç§¯ä¼˜åŒ–ï¼šä» 32.07 MB å‡å°‘åˆ° 2.83 MB
+# ä¼˜åŒ–æ¯”ä¾‹ï¼š91.2%
+# ä¼˜åŒ–å‘½ä»¤ï¼šflutter build web --release --base-href '/FlutterDemo/' --optimization-level=4 --no-source-maps --tree-shake-icons --csp --dart-define=FLUTTER_WEB_USE_SKIA=false
